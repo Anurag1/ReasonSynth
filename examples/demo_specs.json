@@ -1,0 +1,14 @@
+[
+  {
+    "spec": "Write a Python function that returns the square of a number greater than 0.",
+    "expected": "f(x): return x**2"
+  },
+  {
+    "spec": "Write a function that doubles any positive number.",
+    "expected": "f(x): return 2*x"
+  },
+  {
+    "spec": "Write a function that checks if a number is even.",
+    "expected": "f(x): return x % 2 == 0"
+  }
+]
