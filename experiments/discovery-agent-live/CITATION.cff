@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: "Discovery Agent Live Benchmark"
+message: "If you use this benchmark or prototype, please cite it."
+type: software
+authors:
+  - family-names: Dongare
+    given-names: Anurag Bimbisar
+    affiliation: Independent Researcher
+repository-code: "https://github.com/Anurag1/ReasonSynth"
+abstract: "A controlled prototype for testing a multi-agent discovery loop that detects unexplained structure, searches alternative representations, tests contradictions, searches latent-variable explanations, and selects discriminating experiments."
+keywords:
+  - artificial intelligence
+  - multi-agent systems
+  - scientific discovery
+  - hypothesis generation
+  - representation search
+  - latent variables
+  - experiment selection
+license: MIT
