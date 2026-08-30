@@ -1,0 +1,26 @@
+[
+  {
+    "id": "ai-agency-vs-automation",
+    "input": "AI tools can accelerate drafting and execution, but excessive delegation may reduce independent judgment. People need a workflow that uses AI while preserving verification and decision ownership.",
+    "expected": {
+      "problem": "People want AI productivity without surrendering independent judgment.",
+      "tension": "AI delegation increases speed while potentially decreasing ownership and verification.",
+      "hypothesis": "Adding explicit verification checkpoints can retain much of AI's speed while improving decision ownership.",
+      "framework": "ASK: Assign the task, Surface assumptions, Keep the decision.",
+      "practicality": "Use the framework before accepting an AI-generated decision or recommendation.",
+      "experiment": "Compare AI-assisted users with and without verification checkpoints on task speed, error detection, and confidence calibration."
+    }
+  },
+  {
+    "id": "learning-compression",
+    "input": "Learners often face more information than they can organize. Chunking related ideas into compact mental structures can make retrieval and application easier, while practice remains necessary.",
+    "expected": {
+      "problem": "Large information volume can exceed a learner's ability to organize and retrieve it.",
+      "tension": "Compression improves accessibility but oversimplification can remove distinctions needed for correct application.",
+      "hypothesis": "Useful learning compression should preserve decision-relevant distinctions while reducing unnecessary detail.",
+      "framework": "LENS: Link related ideas, Extract distinctions, Name the chunk, Stress-test it.",
+      "practicality": "Turn a lesson into a small set of named chunks, then test each chunk on new examples.",
+      "experiment": "Compare recall and transfer for learners using chunked notes versus unstructured notes on matched material."
+    }
+  }
+]
