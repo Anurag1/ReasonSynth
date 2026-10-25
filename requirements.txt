@@ -1,4 +1,0 @@
-streamlit
-sympy
-z3-solver
-lark-parser
