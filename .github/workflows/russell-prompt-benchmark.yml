@@ -1,0 +1,23 @@
+name: Russell prompt benchmark checks
+
+on:
+  push:
+    branches:
+      - experiment/russell-prompt-benchmark
+    paths:
+      - "benchmark/russell_prompt_eval/**"
+      - ".github/workflows/russell-prompt-benchmark.yml"
+  workflow_dispatch:
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run benchmark scoring tests
+        run: python -m unittest benchmark/russell_prompt_eval/test_score.py
+      - name: Validate benchmark case JSONL
+        run: python -c "import json; from pathlib import Path; p=Path('benchmark/russell_prompt_eval/cases.jsonl'); rows=[json.loads(x) for x in p.read_text().splitlines() if x.strip()]; assert len(rows) >= 8; assert len({r['case_id'] for r in rows}) == len(rows); print(f'Validated {len(rows)} unique cases')"
