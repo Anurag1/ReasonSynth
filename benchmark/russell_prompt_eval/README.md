@@ -72,3 +72,23 @@ The script reports condition means and paired score differences. It does not est
 A higher score in a small pilot is a preliminary observation, not proof of general superiority. Russell's concepts are philosophical inspiration; this benchmark tests the operational prompt, not the truth of Russell's worldview.
 
 Never fabricate runs, scores, API calls, or results. Clearly distinguish planned, executed, and verified experiments.
+
+## Execute paired model calls
+
+The runner uses an OpenAI-compatible Chat Completions endpoint. It makes real API calls only when you provide a valid key and model identifier; API usage may incur charges.
+
+```bash
+export OPENAI_API_KEY="your-api-key"
+export OPENAI_MODEL="your-available-model-id"
+python benchmark/russell_prompt_eval/run_benchmark.py
+```
+
+Optional settings:
+- `OPENAI_BASE_URL` (default: `https://api.openai.com/v1`)
+- `REPETITIONS` (default: `1`)
+- `TEMPERATURE` (default: `0`)
+- `RESULTS_FILE` (default: `benchmark/russell_prompt_eval/results.jsonl`)
+
+The runner requests the same model and temperature for both conditions and writes raw outputs, response IDs, and usage data to JSONL. It alternates condition order. Do not commit API keys or private data. Review model provider terms and costs before running.
+
+**Important:** generated responses are not automatically scored. Blind the condition labels where practical, apply the case-specific rubric, and record scores in a separate CSV. The runner does not claim one prompt is better merely because it completed successfully.
